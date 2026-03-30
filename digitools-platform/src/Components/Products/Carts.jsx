@@ -25,7 +25,7 @@ const Carts = ({ cart }) => {
                         features.map((feature, index) => <Prod_des key={index} feature={feature}></Prod_des>)
                     }
                     <div className="">
-                        <button className="btn bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white rounded-full btn-block">Buy Now</button>
+                        <button className="btn bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white rounded-full btn-block py-6">Buy Now</button>
                     </div>
                 </div>
             </div>
