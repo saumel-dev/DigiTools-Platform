@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Cart_header from './Components/Products/Cart_header'
 import Carts_data from './Components/Products/Carts_data'
 import Stats from './Components/Stats/Stats'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   const fetchCarts = async () => {
@@ -21,6 +22,7 @@ function App() {
       <Suspense>
         <Carts_data cartsPromise={cartsPromise}></Carts_data>
       </Suspense>
+      <ToastContainer></ToastContainer>
     </>
   )
 }

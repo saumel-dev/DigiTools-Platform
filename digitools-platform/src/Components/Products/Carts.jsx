@@ -1,11 +1,20 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
+import { toast } from 'react-toastify';
 import Prod_des from './Prod_des';
 const Carts = ({ cart }) => {
+    const [isSelected, setSelected] = useState(false);
+    const handleCart = () => {
+        setSelected(!isSelected);
+        if (!isSelected) {
+            toast.success("Item added to cart.");
+        }
+    }
+    const btnStyle = !isSelected ? 'bg-linear-to-b from-[#4F39F6] to-[#9514FA]' : 'bg-green-400';
     const { name, description, price, period, tag, tagType, features, icon } = cart;
-    const tagStyle = 
-    tagType === 'popular'? 'badge-primary badge-soft bg-linear-to-b from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'
-    : tagType === 'new'? 'text-[#0A883E] bg-green-100'
-    : tagType === 'best-seller'? 'text-[#BB4D00] bg-yellow-100': '';
+    const tagStyle =
+        tagType === 'popular' ? 'badge-primary badge-soft bg-linear-to-b from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent'
+            : tagType === 'new' ? 'text-[#0A883E] bg-green-100'
+                : tagType === 'best-seller' ? 'text-[#BB4D00] bg-yellow-100' : '';
     return (
         <>
             <div className="card w-96 bg-base-100 shadow-md">
@@ -18,14 +27,14 @@ const Carts = ({ cart }) => {
                         <h2 className="text-2xl font-bold">{name}</h2>
                         <p className='text-[#627382]'>{description}</p>
                     </div>
-                        <h3> <span className='text-2xl font-semibold'>${price}</span> <span className='text-[#627382]'>/{period}</span></h3>
+                    <h3> <span className='text-2xl font-semibold'>${price}</span> <span className='text-[#627382]'>/{period}</span></h3>
                     <div>
                     </div>
                     {
                         features.map((feature, index) => <Prod_des key={index} feature={feature}></Prod_des>)
                     }
-                    <div className="">
-                        <button className="btn bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white rounded-full btn-block py-6">Buy Now</button>
+                    <div>
+                        <button disabled={isSelected} onClick={handleCart} className={`btn ${btnStyle} text-white rounded-full btn-block py-6`}>{isSelected ? "Added to Cart" : "Buy Now"}</button>
                     </div>
                 </div>
             </div>
