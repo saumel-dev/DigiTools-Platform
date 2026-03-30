@@ -1,13 +1,16 @@
 import React, { use, useState } from 'react';
 import { toast } from 'react-toastify';
 import Prod_des from './Prod_des';
-const Carts = ({ cart }) => {
+const Carts = ({ cart, setCartCount, cartCount}) => {
     const [isSelected, setSelected] = useState(false);
     const handleCart = () => {
+        
         setSelected(!isSelected);
         if (!isSelected) {
             toast.success("Item added to cart.");
         }
+        const newCount = cartCount + 1;
+        setCartCount(newCount);
     }
     const btnStyle = !isSelected ? 'bg-linear-to-b from-[#4F39F6] to-[#9514FA]' : 'bg-green-400';
     const { name, description, price, period, tag, tagType, features, icon } = cart;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Prod_des = ({ feature }) => {
-    console.log(feature);
 
     return (
         <>

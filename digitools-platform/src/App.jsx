@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
@@ -6,21 +6,27 @@ import Cart_header from './Components/Products/Cart_header'
 import Carts_data from './Components/Products/Carts_data'
 import Stats from './Components/Stats/Stats'
 import { ToastContainer } from 'react-toastify'
+import Cart_section from './Components/Products/Cart_section'
 
 function App() {
   const fetchCarts = async () => {
     const res = await fetch('/data.json')
     return res.json()
   }
+  const [cartCount, setCartCount] = useState(0);
   const cartsPromise = fetchCarts();
+  const [btn, setBtn] = useState('products');
+  console.log(btn);
   return (
     <>
       <Navbar></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Cart_header></Cart_header>
+      <Cart_header btn={btn} setBtn={setBtn} cartCount={cartCount}></Cart_header>
       <Suspense>
-        <Carts_data cartsPromise={cartsPromise}></Carts_data>
+        {
+          btn === 'products'? <Carts_data cartCount={cartCount} setCartCount={setCartCount} cartsPromise={cartsPromise}></Carts_data> : <Cart_section></Cart_section>
+        }
       </Suspense>
       <ToastContainer></ToastContainer>
     </>
