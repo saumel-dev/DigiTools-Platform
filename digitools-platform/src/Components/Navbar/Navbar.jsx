@@ -30,7 +30,8 @@ const Navbar = () => {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end relative">
+                    <p className='text-[12px] font-bold bg-red-400 rounded-full w-4 text-center absolute right-44 top-2'>0</p>
                     <button className='text-xl'><CiShoppingCart></CiShoppingCart></button>
                     <ul className="menu menu-horizontal">
                         <li><a>Login</a></li>
