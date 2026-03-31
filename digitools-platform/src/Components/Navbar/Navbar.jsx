@@ -1,6 +1,6 @@
 import React from 'react';
 import { CiShoppingCart } from "react-icons/ci";
-const Navbar = () => {
+const Navbar = ({selectedProd}) => {
     return (
         <nav className='container mx-auto'>
             <div className="navbar bg-base-100">
@@ -31,7 +31,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end relative">
-                    <p className='text-[12px] font-bold bg-red-400 rounded-full w-4 text-center absolute right-44 top-2'>0</p>
+                    {
+                        selectedProd.length > 0? <p className='text-[12px] font-bold bg-red-400 text-white rounded-full w-4 text-center absolute right-44 top-2'>{selectedProd.length}</p> : ''
+                    }
                     <button className='text-xl'><CiShoppingCart></CiShoppingCart></button>
                     <ul className="menu menu-horizontal">
                         <li><a>Login</a></li>

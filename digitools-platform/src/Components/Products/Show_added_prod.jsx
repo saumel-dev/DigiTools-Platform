@@ -1,7 +1,8 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 const Show_added_prod = ({prod, setSelectedProd, selectedProd}) => {
     const handleDelete = (prod) => {
-        console.log('delete clicked');
+        toast.error('Item removed from cart');
         const updateCart = selectedProd.filter(item => item.name != prod.name)
         setSelectedProd(updateCart);
     }
@@ -19,7 +20,7 @@ const Show_added_prod = ({prod, setSelectedProd, selectedProd}) => {
                             <h1 className='text-[#101727] text-[20px]'>{name}</h1>
                             <p className='text-[#627382]'>$2{price}</p>
                         </div>
-                        <button className='text-red-500 pr-3' onClick={() => handleDelete(prod)}>Remove</button>
+                        <button className='text-red-500 pr-3 cursor-pointer' onClick={() => handleDelete(prod)}>Remove</button>
                     </div>
                 </div>
             </div>

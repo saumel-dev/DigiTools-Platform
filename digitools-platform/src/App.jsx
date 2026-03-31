@@ -19,7 +19,7 @@ function App() {
   const [selectedProd, setSelectedProd] = useState([]);
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar selectedProd={selectedProd}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
       <Cart_header btn={btn} setBtn={setBtn} selectedProd={selectedProd}></Cart_header>

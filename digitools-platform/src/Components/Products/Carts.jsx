@@ -22,7 +22,7 @@ const Carts = ({ cart, setCartCount, cartCount, setSelectedProd, selectedProd })
     return (
         <>
             <div className="card w-96 bg-base-100 shadow-md">
-                <div className="card-body relative">
+                <div className="card-body relative hover:-translate-y-2 transition-all">
                     <span className={`badge ${tagStyle} badge-xs text-[14px] px-3 py-2 absolute right-5`}>{tag}</span>
                     <div className="mt-6 border border-base-300 rounded-full flex items-center justify-center w-14 h-14">
                         <img className='object-contain' src={icon} alt="" />
@@ -38,7 +38,7 @@ const Carts = ({ cart, setCartCount, cartCount, setSelectedProd, selectedProd })
                         features.map((feature, index) => <Prod_des key={index} feature={feature}></Prod_des>)
                     }
                     <div>
-                        <button disabled={isSelected} onClick={() => handleCart(cart)} className={`btn ${btnStyle} text-white rounded-full btn-block py-6`}>{isSelected ? "Added to Cart" : "Buy Now"}</button>
+                        <button disabled={isSelected} onClick={() => handleCart(cart)} className={`btn cursor-pointer ${btnStyle} text-white rounded-full btn-block py-6`}>{isSelected ? "Added to Cart" : "Buy Now"}</button>
                     </div>
                 </div>
             </div>
