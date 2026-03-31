@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const Cart_header = ({ btn, setBtn, cartCount }) => {
+const Cart_header = ({ btn, setBtn, selectedProd }) => {
 
     return (
         <>
@@ -10,7 +8,7 @@ const Cart_header = ({ btn, setBtn, cartCount }) => {
                     <p className='text-[#627382]'>Choose from our curated collection of premium digital products designed <br></br> to boost your productivity and creativity.</p>
                     <div className='shadow-md inline-block p-1 rounded-full'>
                         <button onClick={() => setBtn('products')} className={`${btn === 'products' ? 'bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white' : ''} text-black py-2 px-5 font-bold rounded-full`}>Products</button>
-                        <button onClick={() => setBtn('cart')} className={`${btn === 'cart' ? 'bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white' : 'text-black'} text-black font-bold py-2 px-8 rounded-full`}>Cart ({cartCount})</button>
+                        <button onClick={() => setBtn('cart')} className={`${btn === 'cart' ? 'bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white' : 'text-black'} text-black font-bold py-2 px-8 rounded-full`}>Cart ({selectedProd.length})</button>
                     </div>
                 </div>
             </section>

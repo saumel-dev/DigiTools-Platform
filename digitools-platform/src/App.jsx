@@ -16,16 +16,16 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   const cartsPromise = fetchCarts();
   const [btn, setBtn] = useState('products');
-  console.log(btn);
+  const [selectedProd, setSelectedProd] = useState([]);
   return (
     <>
       <Navbar></Navbar>
       <Banner></Banner>
       <Stats></Stats>
-      <Cart_header btn={btn} setBtn={setBtn} cartCount={cartCount}></Cart_header>
+      <Cart_header btn={btn} setBtn={setBtn} selectedProd={selectedProd}></Cart_header>
       <Suspense>
         {
-          btn === 'products'? <Carts_data cartCount={cartCount} setCartCount={setCartCount} cartsPromise={cartsPromise}></Carts_data> : <Cart_section></Cart_section>
+          btn === 'products' ? <Carts_data selectedProd={selectedProd} setSelectedProd={setSelectedProd} cartCount={cartCount} setCartCount={setCartCount} cartsPromise={cartsPromise}></Carts_data> : <Cart_section selectedProd={selectedProd} setSelectedProd={setSelectedProd} ></Cart_section>
         }
       </Suspense>
       <ToastContainer></ToastContainer>

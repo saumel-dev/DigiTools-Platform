@@ -1,10 +1,11 @@
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import Prod_des from './Prod_des';
-const Carts = ({ cart, setCartCount, cartCount}) => {
+const Carts = ({ cart, setCartCount, cartCount, setSelectedProd, selectedProd }) => {
     const [isSelected, setSelected] = useState(false);
-    const handleCart = () => {
-        
+    const handleCart = (cart) => {
+        const updatedCart = ([...selectedProd, cart]);
+        setSelectedProd(updatedCart);
         setSelected(!isSelected);
         if (!isSelected) {
             toast.success("Item added to cart.");
@@ -37,7 +38,7 @@ const Carts = ({ cart, setCartCount, cartCount}) => {
                         features.map((feature, index) => <Prod_des key={index} feature={feature}></Prod_des>)
                     }
                     <div>
-                        <button disabled={isSelected} onClick={handleCart} className={`btn ${btnStyle} text-white rounded-full btn-block py-6`}>{isSelected ? "Added to Cart" : "Buy Now"}</button>
+                        <button disabled={isSelected} onClick={() => handleCart(cart)} className={`btn ${btnStyle} text-white rounded-full btn-block py-6`}>{isSelected ? "Added to Cart" : "Buy Now"}</button>
                     </div>
                 </div>
             </div>
