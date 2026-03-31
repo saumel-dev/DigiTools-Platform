@@ -7,6 +7,8 @@ import Carts_data from './Components/Products/Carts_data'
 import Stats from './Components/Stats/Stats'
 import { ToastContainer } from 'react-toastify'
 import Cart_section from './Components/Products/Cart_section'
+import Get_started from './Components/Get_started_section/Get_started'
+import Pricing_section from './Components/Pricing_section/Pricing_section'
 
 function App() {
   const fetchCarts = async () => {
@@ -29,6 +31,8 @@ function App() {
         }
       </Suspense>
       <ToastContainer></ToastContainer>
+      <Get_started></Get_started>
+      <Pricing_section></Pricing_section>
     </>
   )
 }
