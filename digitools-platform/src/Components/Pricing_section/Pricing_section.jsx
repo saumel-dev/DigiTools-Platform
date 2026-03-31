@@ -7,7 +7,7 @@ const Pricing_section = () => {
                 <h1 className='text-5xl font-bold pt-20'>Simple, Transparent Pricing</h1>
                 <p className='pt-4 text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
-            <div className='grid xl:grid-cols-3 justify-items-center'>
+            <div className='grid xl:grid-cols-3 justify-items-center gap-5'>
                 <div className="card w-96 bg-base-100 shadow-sm hover:-translate-y-3 transition-all">
                     <div className="card-body rounded-3xl">
                         <div className="flex flex-col justify-between">
@@ -38,7 +38,8 @@ const Pricing_section = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-sm hover:-translate-y-3 transition-all text-white">
+                <div className="card w-96 bg-base-100 shadow-sm hover:-translate-y-3 transition-all text-white relative">
+                        <span className={`badge text-[#BB4D00] bg-yellow-100 badge-xs text-[14px] px-3 py-3 absolute right-35 -top-2 `}>Most Popular</span>
                     <div className="card-body rounded-3xl bg-linear-to-b from-[#4F39F6] to-[#9514FA]">
                         <div className="flex flex-col justify-between">
                             <h2 className="text-3xl font-bold">Starter</h2>

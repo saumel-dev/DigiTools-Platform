@@ -9,6 +9,8 @@ import { ToastContainer } from 'react-toastify'
 import Cart_section from './Components/Products/Cart_section'
 import Get_started from './Components/Get_started_section/Get_started'
 import Pricing_section from './Components/Pricing_section/Pricing_section'
+import Banner_bottom from './Components/Banner-Bottom/Banner_bottom'
+import Footer from './Components/Footer/Footer'
 
 function App() {
   const fetchCarts = async () => {
@@ -33,6 +35,8 @@ function App() {
       <ToastContainer></ToastContainer>
       <Get_started></Get_started>
       <Pricing_section></Pricing_section>
+      <Banner_bottom></Banner_bottom>
+      <Footer></Footer>
     </>
   )
 }
