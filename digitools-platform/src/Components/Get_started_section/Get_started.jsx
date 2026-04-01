@@ -9,8 +9,8 @@ const Get_started = () => {
                 <h1 className='text-5xl font-bold'>Get Started in 3 Steps</h1>
                 <p className='pt-4 text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className='w-9/12 mx-auto pb-25'>
-                <div className='grid xl:grid-cols-3 justify-items-center'>
+            <div className='max-w-7xl mx-auto pb-25 px-4'>
+                <div className='grid grid-cols-1 xl:grid-cols-3 gap-8 justify-items-center'>
                     <div className='bg-white hover:-translate-y-3 transition-all w-90 rounded-xl items-center text-center mt-20'>
                         <div className='card-body flex justify-center items-center relative'>
                             <p className='text-white px-2 py-1.5 rounded-full absolute bg-linear-to-b from-[#4F39F6] to-[#9514FA] top-5 right-5'>01</p>
