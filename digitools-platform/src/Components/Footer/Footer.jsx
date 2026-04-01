@@ -10,7 +10,7 @@ const Footer = () => {
                     <h1 className='font-bold text-4xl'>DigiTools</h1>
                     <p className='max-w-90 text-[#c5d0d9] '>Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>
                 </div>
-                <div className='grid grid-cols-3 xl:grid-cols-4 gap-20 text-center xl:text-start'>
+                <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10  md:gap-20 text-center xl:text-start'>
                     <div className='space-y-4 text-[#c5d0d9]'>
                         <h1 className='text-xl text-white'>Product</h1>
                         <p>Features</p>
@@ -44,9 +44,9 @@ const Footer = () => {
             </div>
             <div className='container mx-auto pb-5'>
                 <hr className='h-px border-0 bg-gray-400' />
-                <div className='flex flex-wrap justify-center xl:justify-between text-center text-[#cdc6c6ca] pt-10'>
+                <div className='flex flex-col xl:flex-row justify-center xl:justify-between text-center text-[#cdc6c6ca] pt-10'>
                     <p>© 2026 Digitools. All rights reserved.</p>   
-                    <div className='flex gap-5 text-[#cdc6c6ca]'>
+                    <div className='flex gap-5 justify-center text-[#cdc6c6ca]'>
                         <p>Privacy Policy</p>
                         <p>Terms of Service</p>
                         <p>Cookies</p>

@@ -14,8 +14,8 @@ const Pricing_section = () => {
                             <h2 className="text-3xl font-bold">Starter</h2>
                             <p>Perfect for getting started</p>
                         </div>
-                            <span className="text-xl">$29/mo</span>
-                        <ul className="mt-6 flex flex-col gap-2 text-xs">
+                            <span className="text-xl">$0/mo</span>
+                        <ul className="mt-6 flex flex-col gap-2 text-xs grow">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span>Access to 10 free tools</span>
@@ -42,26 +42,34 @@ const Pricing_section = () => {
                         <span className={`badge text-[#BB4D00] bg-yellow-100 badge-xs text-[14px] px-3 py-3 absolute right-35 -top-2 `}>Most Popular</span>
                     <div className="card-body rounded-3xl bg-linear-to-b from-[#4F39F6] to-[#9514FA]">
                         <div className="flex flex-col justify-between">
-                            <h2 className="text-3xl font-bold">Starter</h2>
-                            <p>Perfect for getting started</p>
+                            <h2 className="text-3xl font-bold">Pro</h2>
+                            <p>Best for professionals</p>
                         </div>
                             <span className="text-xl">$29/mo</span>
-                        <ul className="mt-6 flex flex-col gap-2 text-xs">
+                        <ul className="mt-6 flex flex-col gap-2 text-xs grow">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Access to 10 free tools</span>
+                                <span>Access to all premium tools</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Basic templates</span>
+                                <span>Unlimited templates</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Community support</span>
+                                <span>Priority support</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>1 project per month</span>
+                                <span>Unlimited projects</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Cloud sync</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Advanced analytics</span>
                             </li>
                         </ul>
                         <div className="mt-6">
@@ -72,26 +80,34 @@ const Pricing_section = () => {
                 <div className="card w-96 bg-base-100 shadow-sm hover:-translate-y-3 transition-all">
                     <div className="card-body rounded-3xl">
                         <div className="flex flex-col justify-between">
-                            <h2 className="text-3xl font-bold">Starter</h2>
-                            <p>Perfect for getting started</p>
+                            <h2 className="text-3xl font-bold">Enterprise</h2>
+                            <p>For teams and businesses</p>
                         </div>
-                            <span className="text-xl">$29/mo</span>
-                        <ul className="mt-6 flex flex-col gap-2 text-xs">
+                            <span className="text-xl">$99/mo</span>
+                        <ul className="mt-6 flex flex-col gap-2 text-xs grow">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Access to 10 free tools</span>
+                                <span>Everything in Pro</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Basic templates</span>
+                                <span>Team collaboration</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>Community support</span>
+                                <span>Custom integrations</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                <span>1 project per month</span>
+                                <span>Dedicated support</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>SLA guarantee</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Custom branding</span>
                             </li>
                         </ul>
                         <div className="mt-6">
